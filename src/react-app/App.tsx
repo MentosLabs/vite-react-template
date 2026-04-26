@@ -968,12 +968,10 @@ const EduVideoComposerV2: React.FC = () => {
       `}</style>
     </div>
   );
-}
 
       {/* Your entire JSX structure here - unchanged except for typed props */}
       {/* ... full return statement from your original code ... */}
     </div>
-  );
 };
 
 export default EduVideoComposerV2;
