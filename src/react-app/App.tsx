@@ -64,8 +64,39 @@
 // }
 
 // export default App;
+
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
+// Background image state
+const [bgImage] = useState<string | undefined>(undefined);
+
+// Safe ref usage
+const playMascotVideo = () => {
+  if (mascotVideoRef.current) {
+    mascotVideoRef.current.play();
+  }
+};
+
+const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const files = e.target.files;
+  if (files && files.length > 0) {
+    const file = files[0];
+    if (mascotImageRef.current) {
+      mascotImageRef.current.src = URL.createObjectURL(file);
+    }
+  }
+};
+
+// Example usage in JSX
+return (
+  <div className="App">
+    <nav>...</nav>
+    <main>...</main>
+
+    <button onClick={playMascotVideo}>Play Mascot</button>
+    <input type="file" onChange={handleFileUpload} />
+  </div>
+);
 
 // -------------------- Interfaces --------------------
 interface Device {
