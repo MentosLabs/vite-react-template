@@ -967,8 +967,8 @@ const EduVideoComposerV2: React.FC = () => {
         @keyframes wave { 0%{opacity:0.4} 100%{opacity:1;transform:scaleY(1.4)} }
       `}</style>
     </div>
-  )
 
+      
       {/* Your entire JSX structure here - unchanged except for typed props */}
       {/* ... full return statement from your original code ... */}
     </div>
